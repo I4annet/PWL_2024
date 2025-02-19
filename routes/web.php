@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
@@ -37,4 +38,11 @@ use Illuminate\Support\Facades\Route;
 //     return 'Nama saya '.$name;
 // });
 
-Route::get('/hello', [Controller::class,'hello']);
+// Route::get('/hello', [Controller::class,'hello']);
+
+Route::get('/', [PageController::class, 'index']);
+
+Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/article/{id}', [PageController::class, 'article']);
+
