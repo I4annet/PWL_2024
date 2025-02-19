@@ -27,7 +27,13 @@ use Illuminate\Support\Facades\Route;
 //     return 'Nim : 2341720126 <br> Nama : Ivansyah Eka Oktaviadi Santoso';
 // });
 
-Route::get('/user/{ivansyah}', function ($name) {
-    return 'Nama saya '.$name;
+// Route::get('/user/{ivansyah}', function ($name) {
+//     return 'Nama saya '.$name;
+// });
+
+Route::get('/posts/{post}/comments/{comment}', function ($postId, $commentId) {
+    return 'Pos ke-'. $postId . ' Komentar ke-'. $commentId;
 });
+
+
 
