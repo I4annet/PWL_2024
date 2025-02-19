@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\PhotoController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -40,9 +41,10 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/hello', [Controller::class,'hello']);
 
-Route::get('/', [PageController::class, 'index']);
+// Route::get('/', [PageController::class, 'index']);
 
-Route::get('/about', [PageController::class, 'about']);
+// Route::get('/about', [PageController::class, 'about']);
 
-Route::get('/article/{id}', [PageController::class, 'article']);
+// Route::get('/article/{id}', [PageController::class, 'article']);
 
+Route::resource('photos', PhotoController::class);
