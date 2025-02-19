@@ -1,19 +1,13 @@
 <?php
 
-use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\PhotoController;
-use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 
-// Route::get('/hello', function () {
-//     return 'Hello World';                
-// });
 
+// Route::get('/hello', function () {
+//     return 'Hello World';                PRAKTIKUM 1
+// });
 
 // Route::get('/world', function () {
 //     return 'World';     
@@ -27,7 +21,7 @@ use Illuminate\Support\Facades\Route;
 //     return 'Nim : 2341720126 <br> Nama : Ivansyah Eka Oktaviadi Santoso';
 // });
 
-// Route::get('/user/{ivansyah}', function ($name) {
+// Route::get('/user/{ivansyah?}', function ($name) {
 //     return 'Nama saya '.$name;
 // });
 
@@ -39,11 +33,8 @@ use Illuminate\Support\Facades\Route;
 //     return 'Nama saya '.$name;
 // });
 
-Route::get('/user/{name?}', function ($name = null) {
-    return 'Nama saya '.$name;
-});
+// Route::get('/user/{name?}', function ($name = null) {
+//     return 'Nama saya '.$name;
+// });
 
-
-
-
-
+Route::get('/hello', [Controller::class,'hello']);
