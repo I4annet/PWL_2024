@@ -1,6 +1,12 @@
 <?php
 
-
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -13,13 +19,15 @@ use Illuminate\Support\Facades\Route;
 //     return 'World';     
 // });
 
+// Route::get('/pesan', function () {
+//     return 'Selamat Datang';
+// });
 
+// Route::get('/about', function () {
+//     return 'Nim : 2341720126 <br> Nama : Ivansyah Eka Oktaviadi Santoso';
+// });
 
-Route::get('/pesan', function () {
-    return 'Selamat Datang';
-});
-
-Route::get('/about', function () {
-    return 'Nim : 2341720126 <br> Nama : Ivansyah Eka Oktaviadi Santoso';
+Route::get('/user/{ivansyah}', function ($name) {
+    return 'Nama saya '.$name;
 });
 
